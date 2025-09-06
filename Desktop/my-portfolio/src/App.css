@@ -1,0 +1,137 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+section {
+  background: #b9b3e2;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+section h2 {
+  margin-bottom: 10px;
+}
+section ul li {
+  display: inline-block;
+  margin-right: 10px;
+  background: #570ee9;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+a {
+  color: #0077cc;
+  text-decoration: underline;
+}
+
+li:hover { background: #0077cc; color: white; cursor: pointer; }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px; 
+}
+
+.project-card {
+  background: linear-gradient(135deg, #b9b3e2, #9a88e0);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+
+.project-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.project-card ul li {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background: #0077cc;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.project-card ul li:hover {
+  background: #0077cc;
+  color: white;
+  cursor: pointer;
+}
+
+.project-card a {
+  color: #0077cc;
+  text-decoration: underline;
+}
+
+.intro-card {
+  background: #f5ad04;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.intro-card h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.intro-card h3 {
+  margin: 5px 0 10px;
+  color: #555;
+  font-weight: normal;
+}
+
+.contact-links a {
+  margin-right: 15px;
+  color: #0077cc;
+  text-decoration: underline;
+}
+
+.contact-links a:hover {
+  color: #005fa3;
+}
