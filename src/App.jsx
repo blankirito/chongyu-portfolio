@@ -70,7 +70,7 @@ function App() {
         <h3>Software Engineer</h3>
         <p>Bachelor of Software Engineering (Hons), University of Wollongong Malaysia, Expected Sep 2026</p>
         <p>
-          Software Engineering graduate with experience in full-stack development and machine learning applications. Focused on building scalable software systems and data-driven solutions.   
+          Software Engineering graduate with experience in android developement, full-stack development and machine learning applications. Focused on building scalable software systems and data-driven solutions.   
         </p>
         <div className="contact-links">
           <a href="mailto:leechongyu99@gmail.com">Email</a> | 
