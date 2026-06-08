@@ -50,10 +50,10 @@ function App() {
     <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
       <div className="intro-card">
         <h1>Lee Chong Yu</h1>
-        <h3>Software Engineer | Seeking Summer 2026 Internship</h3>
+        <h3>Software Engineer</h3>
         <p>Bachelor of Software Engineering (Hons), University of Wollongong Malaysia, Expected Sep 2026</p>
         <p>
-          I am a software engineer passionate about Android, full-stack, and ML projects, currently seeking internship opportunities to apply my skills in real-world projects.
+          Software Engineering graduate with experience in Andriod development, full-stack development and machine learning applications. Focused on building scalable software systems and data-driven solutions.
         </p>
         <div className="contact-links">
           <a href="mailto:leechongyu99@gmail.com">Email</a> | 
