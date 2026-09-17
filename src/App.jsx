@@ -6,9 +6,17 @@ function App() {
 
   const projects = [
     {
-      title: "Expense Tracking Android Application",
-      description: "A mobile app built with Android Studio & Kotlin",
-      tech: ["Kotlin", "Android Studio"],
+      title: "Mofiney - Personal Finance Application",
+      description:
+        "A local-first personal finance application for managing accounts, transactions, budgets, recurring payments, and financial insights.",
+      tech: ["Flutter", "Dart", "Drift", "SQLite", "REST APIs"],
+      link: "https://github.com/blankirito/Mofiney",
+    },
+    {
+      title: "Expense Tracking Application - Android",
+      description:
+        "An Android personal finance application featuring expense tracking, OCR-based receipt extraction, and expense forecasting.",
+      tech: ["Kotlin", "Jetpack Compose", "OCR", "Machine Learning"],
       link: "https://github.com/blankirito/Expense-Tracking",
       media: [
         { type: "video", src: "/videos/demo_video.mp4" },
@@ -20,47 +28,75 @@ function App() {
         { type: "image", src: "/photos/scan.jpeg", row: 6 },
         { type: "image", src: "/photos/budget.jpeg", row: 7 },
         { type: "image", src: "/photos/profile.jpeg", row: 8 },
-      ]
+      ],
     },
     {
-      title: "30 Days Travel Planner (Self-taught Android App)",
-      description: "A mobile app built with Android Studio & Kotlin",
-      tech: ["Kotlin", "Android Studio"],
-      link: "https://github.com/blankirito/Trip_to_Japan_Android_App",
-      media: [
-        { type: "video", src: "/videos/Android_App.mp4" }
-      ]
+      title: "Genre Prediction - NLP",
+      description:
+        "An NLP classification model that predicts movie and TV show genres from text descriptions using TF-IDF and machine learning.",
+      tech: ["Python", "scikit-learn", "NLP", "TF-IDF"],
+      link: "https://github.com/blankirito/Genre_Prediction",
     },
     {
-      title: "Genre Predict (NLP Project)",
-      description: "Build an NLP model to predict the movie or tv show genre from text description",
-      tech: ["Python"],
-      link: "https://github.com/blankirito/Genre_Prediction"
+      title: "Future Popularity Prediction - Machine Learning",
+      description:
+        "A machine learning project for predicting the future popularity of movies and TV shows from multiple features.",
+      tech: ["Python", "scikit-learn", "Machine Learning"],
+      link: "https://github.com/blankirito/Future_Prediction",
     },
     {
-      title: "Future Predict (ML Project)",
-      description: "Developed a model to predict the future popular movie or tv show from multiple feature",
-      tech: ["Python"],
-      link: "https://github.com/blankirito/Future_Prediction"
-    },
-    {
-      title: "Student Performance (Full Stack)",
-      description: "Designed and developed a full stack web app to track and visualize student performance",
-      tech: ["HTML/CSS", "PHP", "JavaScripts", "MYSQL"],
+      title: "Student Performance - Full Stack",
+      description:
+        "A full-stack web application for tracking, managing, and visualizing student academic performance.",
+      tech: ["HTML/CSS", "JavaScript", "PHP", "MySQL"],
       link: "https://github.com/blankirito/Student_Performance",
       media: [
         { type: "image", src: "/photos/homepage.png", row: 1 },
 
-        { type: "image", src: "/photos/student_profile_academic_status.png", row: 2 },
-        { type: "image", src: "/photos/student_profile_program_requirement.png", row: 2 },
+        {
+          type: "image",
+          src: "/photos/student_profile_academic_status.png",
+          row: 2,
+        },
+        {
+          type: "image",
+          src: "/photos/student_profile_program_requirement.png",
+          row: 2,
+        },
 
-        { type: "image", src: "/photos/program_leader_academic_performance.png", row: 3 },
-        { type: "image", src: "/photos/program_leader_student_status.png", row: 3 },
-        
-        { type: "image", src: "/photos/student_management.png", row: 4 },
-        { type: "image", src: "/photos/course_management.png", row: 4 }
-      ]
-    }
+        {
+          type: "image",
+          src: "/photos/program_leader_academic_performance.png",
+          row: 3,
+        },
+        {
+          type: "image",
+          src: "/photos/program_leader_student_status.png",
+          row: 3,
+        },
+
+        {
+          type: "image",
+          src: "/photos/student_management.png",
+          row: 4,
+        },
+        {
+          type: "image",
+          src: "/photos/course_management.png",
+          row: 4,
+        },
+      ],
+    },
+    {
+      title: "30 Days Travel Planner - Android",
+      description:
+        "A self-taught Android project for exploring Kotlin and native Android application development.",
+      tech: ["Kotlin", "Android"],
+      link: "https://github.com/blankirito/Trip_to_Japan_Android_App",
+      media: [
+        { type: "video", src: "/videos/Android_App.mp4" },
+      ],
+    },
   ];
 
   return (
@@ -68,14 +104,22 @@ function App() {
       <div className="intro-card">
         <h1>Lee Chong Yu</h1>
         <h3>Software Engineer</h3>
-        <p>Bachelor of Software Engineering (Hons), University of Wollongong Malaysia, Expected Sep 2026</p>
+
         <p>
-          Software Engineering graduate with experience in android developement, full-stack development and machine learning applications. Focused on building scalable software systems and data-driven solutions.   
+          Bachelor of Software Engineering (Hons), UOW Malaysia
+          <br />
+          Expected Graduation: Nov 2026
+        </p>
+
+        <p>
+          Software Engineering undergraduate with hands-on experience in enterprise
+          application, backend, and mobile development. Experienced in C#, ASP.NET,
+          SQL Server, REST APIs, Flutter, Dart, Kotlin, Python, and machine learning.
         </p>
         <div className="contact-links">
           <a href="mailto:leechongyu99@gmail.com">Email</a> | 
           <a href="https://github.com/blankirito" target="_blank" rel="noopener noreferrer">GitHub</a> | 
-          <a href="https://www.linkedin.com/in/lee-chongyu-609b9131b" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/lee-chongyu" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
       </div>
 
