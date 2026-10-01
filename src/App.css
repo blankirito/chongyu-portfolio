@@ -1,171 +1,670 @@
 #root {
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 3rem 2rem 5rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* =========================================================
+   Global
+   ========================================================= */
+
+body {
+  margin: 0;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(99, 102, 241, 0.14),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at top left,
+      rgba(59, 130, 246, 0.10),
+      transparent 30%
+    ),
+    #f6f7fb;
+
+  color: #172033;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-section {
-  background: #b9b3e2;
-  padding: 20px;
-  margin: 15px 0;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-section h2 {
-  margin-bottom: 10px;
-}
-section ul li {
-  display: inline-block;
-  margin-right: 10px;
-  background: #570ee9;
-  padding: 3px 8px;
-  border-radius: 4px;
-}
 a {
-  color: #0077cc;
+  color: #4f46e5;
+  text-decoration: none;
+}
+
+a:hover {
   text-decoration: underline;
 }
 
-li:hover { background: #0077cc; color: white; cursor: pointer; }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  gap: 20px; 
-}
-
-.project-card {
-  background: linear-gradient(135deg, #b9b3e2, #9a88e0);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-
-.project-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0;
-}
-
-.project-card ul li {
-  display: inline-block;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  background: #0077cc;
-  padding: 3px 8px;
-  border-radius: 4px;
-}
-
-.project-card ul li:hover {
-  background: #0077cc;
-  color: white;
-  cursor: pointer;
-}
-
-.project-card a {
-  color: #0077cc;
-  text-decoration: underline;
-}
+/* =========================================================
+   Introduction / Hero
+   ========================================================= */
 
 .intro-card {
-  background: #f5ad04;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 30px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+
+  padding: 42px 48px;
+  margin-bottom: 52px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #071b2e 0%,
+      #102a43 55%,
+      #253b80 100%
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+
+  text-align: left;
+
+  box-shadow:
+    0 20px 50px rgba(15, 23, 42, 0.18);
 }
 
 .intro-card h1 {
-  margin: 0;
-  font-size: 2rem;
+  margin-bottom: 6px;
+
+  color: #ffffff;
+
+  font-size: 3rem;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
 }
 
 .intro-card h3 {
-  margin: 5px 0 10px;
-  color: #555;
-  font-weight: normal;
+  margin: 0 0 24px;
+
+  color: #a5b4fc;
+
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.intro-card p {
+  max-width: 780px;
+  margin-bottom: 18px;
+
+  color: #dbe4f0;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   Availability Badge
+   ========================================================= */
+
+.availability {
+  display: inline-block;
+
+  margin: 4px 0 22px;
+  padding: 7px 12px;
+
+  background: rgba(165, 180, 252, 0.12);
+  color: #c7d2fe;
+
+  border: 1px solid rgba(199, 210, 254, 0.25);
+  border-radius: 999px;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   Intro Summary
+   ========================================================= */
+
+.intro-summary {
+  margin-top: 0;
+}
+
+
+/* =========================================================
+   Contact Links
+   ========================================================= */
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  margin-top: 20px;
 }
 
 .contact-links a {
-  margin-right: 15px;
-  color: #0077cc;
-  text-decoration: underline;
+  color: #c7d2fe;
+
+  font-weight: 600;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .contact-links a:hover {
-  color: #005fa3;
+  color: #ffffff;
+
+  text-decoration: none;
 }
+
+
+/* =========================================================
+   Section Headings
+   ========================================================= */
+
+#root > h1 {
+  margin: 0 0 28px;
+
+  color: #111827;
+
+  font-size: 2rem;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+
+  text-align: left;
+}
+
+
+/* Space between Featured Projects and Other Projects */
+
+.grid-container + h1 {
+  margin-top: 56px;
+}
+
+
+/* =========================================================
+   Project Grid
+   ========================================================= */
+
+.grid-container {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+
+/* =========================================================
+   Normal Project Cards
+   ========================================================= */
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 260px;
+
+  margin: 0;
+  padding: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+
+  text-align: left;
+
+  box-shadow:
+    0 4px 18px rgba(0, 0, 0, 0.05);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+
+  border-color: #c7d2fe;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.09);
+}
+
+.project-card h2 {
+  margin-bottom: 12px;
+
+  color: #111827;
+
+  font-size: 1.3rem;
+  line-height: 1.35;
+}
+
+.project-card p {
+  margin-bottom: 18px;
+
+  color: #6b7280;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   Featured Projects
+   ========================================================= */
+
+.featured-project {
+  position: relative;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff 0%,
+      #f7f5ff 100%
+    );
+
+  border: 1px solid #c4b5fd;
+
+  box-shadow:
+    0 8px 25px rgba(79, 70, 229, 0.08);
+}
+
+
+/* Gradient line at top */
+
+.featured-project::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 28px;
+  right: 28px;
+
+  height: 4px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #4f46e5,
+      #7c3aed,
+      #3b82f6
+    );
+
+  border-radius: 0 0 4px 4px;
+}
+
+.featured-project:hover {
+  transform: translateY(-6px);
+
+  border-color: #818cf8;
+
+  box-shadow:
+    0 18px 40px rgba(79, 70, 229, 0.15);
+}
+
+
+/* =========================================================
+   Technology Tags
+   ========================================================= */
+
+.project-card ul {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  padding: 0;
+  margin: 0 0 22px;
+
+  list-style: none;
+}
+
+.project-card ul li {
+  margin: 0;
+  padding: 5px 10px;
+
+  background: #eef2ff;
+  color: #4338ca;
+
+  border-radius: 999px;
+
+  font-size: 0.82rem;
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.project-card ul li:hover {
+  background: #e0e7ff;
+  color: #3730a3;
+
+  cursor: default;
+}
+
+
+/* =========================================================
+   Project Links / Buttons
+   ========================================================= */
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: auto;
+}
+
+.project-links a {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 9px 14px;
+
+  background: #ffffff;
+  color: #4338ca;
+
+  border: 1px solid #c7d2fe;
+  border-radius: 8px;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.project-links a:hover {
+  background: #eef2ff;
+
+  border-color: #818cf8;
+
+  text-decoration: none;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 4px 10px rgba(79, 70, 229, 0.08);
+}
+
+.case-study-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 14px;
+  background: #4f46e5;
+  color: #ffffff;
+  border: 1px solid #4f46e5;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.case-study-link:hover { background: #4338ca; }
+.case-study-link:focus-visible { outline: 3px solid #818cf8; outline-offset: 4px; }
+
+
+/* =========================================================
+   Modal Overlay
+   ========================================================= */
 
 .modal-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5);
+  inset: 0;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
+  padding: 24px;
+
+  background: rgba(17, 24, 39, 0.65);
+
+  backdrop-filter: blur(4px);
+
   z-index: 1000;
 }
 
+
+/* =========================================================
+   Modal Content
+   ========================================================= */
+
 .modal-content {
-  background: rgb(77, 180, 221);
-  padding: 20px;
-  border-radius: 8px;
-  max-height: 90%;
+  width: min(900px, 100%);
+  max-height: 90vh;
+
+  padding: 32px;
+
   overflow-y: auto;
-  text-align: center;
+
+  background: #ffffff;
+  color: #1f2937;
+
+  border-radius: 18px;
+
+  text-align: left;
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.25);
 }
 
 .modal-content h2 {
+  margin-bottom: 12px;
+
+  color: #111827;
+
   font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.modal-content p {
+  color: #6b7280;
+
+  line-height: 1.6;
+}
+
+.modal-content button {
+  margin-top: 20px;
+  padding: 10px 18px;
+
+  background: #4f46e5;
+  color: #ffffff;
+
+  border: 0;
+  border-radius: 8px;
+
   font-weight: 600;
-  margin-bottom: 15px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.modal-content button:hover {
+  background: #4338ca;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   Project Media
+   ========================================================= */
+
+.media-container {
+  margin-top: 24px;
 }
 
 .media-row {
   display: flex;
   justify-content: center;
-  margin-bottom: 10px;
+
+  gap: 12px;
+
+  margin-bottom: 16px;
+}
+
+.media-row img {
+  border-radius: 10px;
+}
+
+
+/* =========================================================
+   Tablet
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  #root {
+    padding:
+      2rem
+      1.5rem
+      4rem;
+  }
+
+  .intro-card {
+    padding: 38px 36px;
+
+    margin-bottom: 48px;
+  }
+
+  .intro-card h1 {
+    font-size: 2.6rem;
+  }
+
+  .grid-container {
+    gap: 18px;
+  }
+
+  .project-card {
+    padding: 24px;
+  }
+}
+
+
+/* =========================================================
+   Mobile
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  #root {
+    padding:
+      1.25rem
+      1rem
+      3rem;
+  }
+
+
+  /* ---------- Hero ---------- */
+
+  .intro-card {
+    padding: 28px 22px;
+
+    margin-bottom: 42px;
+
+    border-radius: 18px;
+  }
+
+  .intro-card h1 {
+    font-size: 2.25rem;
+  }
+
+  .intro-card h3 {
+    margin-bottom: 20px;
+
+    font-size: 1.15rem;
+  }
+
+  .intro-card p {
+    font-size: 0.95rem;
+
+    line-height: 1.65;
+  }
+
+  .availability {
+    margin-bottom: 20px;
+  }
+
+  .contact-links {
+    gap: 12px;
+
+    margin-top: 18px;
+  }
+
+
+  /* ---------- Section Heading ---------- */
+
+  #root > h1 {
+    margin-bottom: 22px;
+
+    font-size: 1.8rem;
+  }
+
+  .grid-container + h1 {
+    margin-top: 46px;
+  }
+
+
+  /* ---------- Projects ---------- */
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    min-height: auto;
+
+    padding: 22px;
+  }
+
+  .project-card h2 {
+    font-size: 1.2rem;
+  }
+
+
+  /* ---------- Modal ---------- */
+
+  .modal-overlay {
+    padding: 14px;
+  }
+
+  .modal-content {
+    padding: 22px;
+  }
+
+
+  /* ---------- Media ---------- */
+
+  .media-row {
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .media-row img {
+    width: 100% !important;
+    max-height: none !important;
+  }
 }

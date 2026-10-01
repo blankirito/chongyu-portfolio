@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import LuminaCaseStudy from './components/LuminaCaseStudy';
 import './App.css';
 
 function App() {
@@ -6,12 +7,33 @@ function App() {
 
   const projects = [
     {
+      id: 'lumina',
+      title: "Lumina - Multi-Tenant E-Commerce SaaS Platform",
+      description:
+        "A multi-tenant e-commerce SaaS platform with tenant-isolated storefronts, checkout and order tracking, merchant and platform administration, authentication, and subscription lifecycle workflows.",
+      tech: [
+        "Next.js",
+        "TypeScript",
+        "React",
+        "Supabase",
+        "PostgreSQL",
+        "Tailwind CSS",
+        "Vercel",
+      ],
+      link: "https://github.com/blankirito/beauty-store",
+      liveLink:
+        "https://beauty-store-kappa-coral.vercel.app/store/veloura",
+      featured: true,
+    },
+    {
       title: "Mofiney - Personal Finance Application",
       description:
-        "A local-first personal finance application for managing accounts, transactions, budgets, recurring payments, and financial insights.",
-      tech: ["Flutter", "Dart", "Drift", "SQLite", "REST APIs"],
+        "A local-first personal finance application for managing accounts, transactions, budgets, recurring payments, multi-currency finances, and financial insights.",
+      tech: ["Flutter", "Dart", "Drift", "SQLite"],
       link: "https://github.com/blankirito/Mofiney",
+      featured: true,
     },
+
     {
       title: "Expense Tracking Application - Android",
       description:
@@ -107,42 +129,150 @@ function App() {
 
         <p>
           Bachelor of Software Engineering (Hons), UOW Malaysia
-          <br />
-          Expected Graduation: Nov 2026
         </p>
 
-        <p>
-          Software Engineering undergraduate with hands-on experience in enterprise
-          application, backend, and mobile development. Experienced in C#, ASP.NET,
-          SQL Server, REST APIs, Flutter, Dart, Kotlin, Python, and machine learning.
+        <span className="availability">
+          Available from Dec 2026
+        </span>
+
+        <p className="intro-summary">
+          Software Engineering undergraduate with hands-on experience developing
+          enterprise, full-stack, and mobile applications. Experienced in
+          customer-facing feature development, production debugging, relational
+          databases, REST APIs, and end-to-end application delivery. Built and
+          deployed a multi-tenant SaaS platform alongside mobile applications.
         </p>
+
         <div className="contact-links">
-          <a href="mailto:leechongyu99@gmail.com">Email</a> | 
-          <a href="https://github.com/blankirito" target="_blank" rel="noopener noreferrer">GitHub</a> | 
-          <a href="https://www.linkedin.com/in/lee-chongyu" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:leechongyu99@gmail.com">
+            Email
+          </a>
+
+          <a
+            href="https://github.com/blankirito"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/lee-chongyu"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
         </div>
       </div>
 
-      <h1>Chong Yu's Portfolio</h1>
+      <h1>Featured Projects</h1>
+
       <div className="grid-container">
-        {projects.map((proj, idx) => (
-          <section
-            key={idx}
-            className="project-card"
-            style={{ cursor: "pointer" }}
-            onClick={() => setSelectedProject(proj)}
-          >
-            <h2>{proj.title}</h2>
-            <p>{proj.description}</p>
-            <ul>
-              {proj.tech.map((t, i) => <li key={i}>{t}</li>)}
-            </ul>
-            <a href={proj.link} target="_blank" rel="noopener noreferrer">GitHub Repository</a>
-          </section>
-        ))}
+        {projects
+          .filter((proj) => proj.featured)
+          .map((proj) => (
+            <section
+              key={proj.title}
+              className="project-card featured-project"
+              style={{ cursor: "pointer" }}
+              onClick={() => setSelectedProject(proj)}
+            >
+              <h2>{proj.title}</h2>
+              <p>{proj.description}</p>
+
+              <ul>
+                {proj.tech.map((tech) => (
+                  <li key={tech}>{tech}</li>
+                ))}
+              </ul>
+
+              <div className="project-links">
+                {proj.id === 'lumina' && (
+                  <button
+                    type="button"
+                    className="case-study-link"
+                    aria-label="View Lumina case study"
+                    onClick={(event) => { event.stopPropagation(); setSelectedProject(proj); }}
+                  >
+                    View case study ↗
+                  </button>
+                )}
+                {proj.liveLink && (
+                  <a
+                    href={proj.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    Live Demo
+                  </a>
+                )}
+
+                <a
+                  href={proj.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  GitHub Repository
+                </a>
+              </div>
+            </section>
+          ))}
       </div>
 
-      {selectedProject && (
+      <h1>Other Projects</h1>
+
+      <div className="grid-container">
+        {projects
+          .filter((proj) => !proj.featured)
+          .map((proj) => (
+            <section
+              key={proj.title}
+              className="project-card"
+              style={{ cursor: "pointer" }}
+              onClick={() => setSelectedProject(proj)}
+            >
+              <h2>{proj.title}</h2>
+              <p>{proj.description}</p>
+
+              <ul>
+                {proj.tech.map((tech) => (
+                  <li key={tech}>{tech}</li>
+                ))}
+              </ul>
+
+              <div className="project-links">
+                {proj.liveLink && (
+                  <a
+                    href={proj.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    Live Demo
+                  </a>
+                )}
+
+                <a
+                  href={proj.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  GitHub Repository
+                </a>
+              </div>
+            </section>
+          ))}
+      </div>
+
+      {selectedProject?.id === 'lumina' && (
+        <LuminaCaseStudy project={selectedProject} onClose={() => setSelectedProject(null)} />
+      )}
+
+      {selectedProject && selectedProject.id !== 'lumina' && (
         <div className="modal-overlay" onClick={() => setSelectedProject(null)}>
           <div className="modal-content" onClick={e => e.stopPropagation()}>
             <h2>{selectedProject.title}</h2>
@@ -169,7 +299,7 @@ function App() {
                     </video>
                   ))}
 
-                {[1,2,3,4,5,6,7,8].map(rowNum => (
+                {[1, 2, 3, 4, 5, 6, 7, 8].map(rowNum => (
                   <div key={rowNum} className="media-row" style={{ display: "flex", justifyContent: "center", marginBottom: "10px" }}>
                     {selectedProject.media
                       .filter(item => item.type === "image" && item.row === rowNum)
