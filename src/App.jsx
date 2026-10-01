@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import LuminaCaseStudy from './components/LuminaCaseStudy';
+import MofineyCaseStudy from './components/MofineyCaseStudy';
 import './App.css';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
       featured: true,
     },
     {
+      id: 'mofiney',
       title: "Mofiney - Personal Finance Application",
       description:
         "A local-first personal finance application for managing accounts, transactions, budgets, recurring payments, multi-currency finances, and financial insights.",
@@ -188,11 +190,11 @@ function App() {
               </ul>
 
               <div className="project-links">
-                {proj.id === 'lumina' && (
+                {(proj.id === 'lumina' || proj.id === 'mofiney') && (
                   <button
                     type="button"
                     className="case-study-link"
-                    aria-label="View Lumina case study"
+                    aria-label={`View ${proj.id === 'lumina' ? 'Lumina' : 'Mofiney'} case study`}
                     onClick={(event) => { event.stopPropagation(); setSelectedProject(proj); }}
                   >
                     View case study ↗
@@ -272,7 +274,11 @@ function App() {
         <LuminaCaseStudy project={selectedProject} onClose={() => setSelectedProject(null)} />
       )}
 
-      {selectedProject && selectedProject.id !== 'lumina' && (
+      {selectedProject?.id === 'mofiney' && (
+        <MofineyCaseStudy project={selectedProject} onClose={() => setSelectedProject(null)} />
+      )}
+
+      {selectedProject && !['lumina', 'mofiney'].includes(selectedProject.id) && (
         <div className="modal-overlay" onClick={() => setSelectedProject(null)}>
           <div className="modal-content" onClick={e => e.stopPropagation()}>
             <h2>{selectedProject.title}</h2>

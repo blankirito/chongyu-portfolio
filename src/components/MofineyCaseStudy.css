@@ -1,0 +1,95 @@
+.mofiney-dialog,
+.mofiney-viewer {
+  box-sizing: border-box;
+  color-scheme: light;
+  color: #172b32;
+  background: #fff;
+  border: 1px solid #d8e5e3;
+  border-radius: 18px;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  text-align: left;
+  box-shadow: 0 25px 80px #071b2e40;
+}
+
+.mofiney-dialog { width: min(1120px, calc(100% - 48px)); max-width: none; max-height: calc(100dvh - 48px); overflow: hidden; }
+.mofiney-dialog *, .mofiney-viewer * { box-sizing: border-box; }
+.mofiney-dialog::backdrop, .mofiney-viewer::backdrop { background: #101f29ba; backdrop-filter: blur(5px); }
+.mofiney-dialog button, .mofiney-viewer button { font: inherit; }
+.mofiney-dialog button:focus-visible, .mofiney-dialog a:focus-visible, .mofiney-viewer button:focus-visible { outline: 3px solid #0d9488; outline-offset: 4px; }
+.mofiney-bar { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 28px; background: #fff; font-size: 14px; font-weight: 700; }
+.mofiney-bar__label { color: #65767a; font-weight: 400; }
+.mofiney-bar button { flex-shrink: 0; min-height: 44px; padding: 8px 16px; background: #e9f6f3; color: #11685f; border: 1px solid #c3e3dc; border-radius: 8px; }
+.mofiney-progress { position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: #e8f3f0; }
+.mofiney-progress span { display: block; height: 100%; background: linear-gradient(90deg, #0d9488, #2dd4bf); }
+.mofiney-scroll { max-height: calc(100dvh - 122px); overflow-y: auto; overscroll-behavior: contain; }
+.mofiney-hero { display: grid; grid-template-columns: minmax(0, 1fr) 236px; align-items: center; gap: 64px; padding: 44px 64px 38px 48px; background: radial-gradient(ellipse at 95% 15%, #0d6b614d, transparent 65%), linear-gradient(135deg, #091820, #103c3c); color: #fff; }
+.mofiney-eyebrow { color: #11685f; font-size: 11px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; margin: 0 0 14px; }
+.mofiney-hero .mofiney-eyebrow { color: #79e0d0; }
+.mofiney-hero h2 { margin: 0 0 20px; color: #fff; font-size: clamp(40px, 5vw, 60px); line-height: 1; letter-spacing: -.04em; }
+.mofiney-hero__headline { font-size: clamp(26px, 3.4vw, 40px); line-height: 1.15; letter-spacing: -.03em; font-weight: 600; margin-bottom: 22px; }
+.mofiney-hero__summary { color: #c2d9d7; font-size: 14px; line-height: 1.8; max-width: 530px; margin-bottom: 24px; }
+.mofiney-source { display: inline-flex; align-items: center; min-height: 44px; padding: 11px 16px; background: #e7faf5; color: #135f55; border: 1px solid #b3dcd1; border-radius: 8px; font-size: 13px; font-weight: 700; text-decoration: none; }
+.mofiney-source:hover { background: #cff5ea; color: #0d4c43; text-decoration: none; }
+.mofiney-hero__tags { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 24px 0 0; padding: 20px 0 0; border-top: 1px solid #ffffff26; list-style: none; color: #9cceca; font-size: 11px; }
+.mofiney-hero__phone { margin: 0; }
+.mofiney-hero__phone img { display: block; width: 100%; height: auto; border: 1px solid #ffffff29; border-radius: 19px; box-shadow: 0 15px 40px #0005; }
+.mofiney-hero__phone figcaption { margin-top: 12px; text-align: center; color: #a9cfca; font-size: 11px; }
+.mofiney-nav { position: sticky; top: 0; z-index: 3; display: flex; gap: 4px; padding: 12px 38px; overflow-x: auto; overscroll-behavior-inline: contain; background: #f6faf9f5; border-bottom: 1px solid #dfe9e6; backdrop-filter: blur(12px); scrollbar-width: thin; }
+.mofiney-nav button { flex-shrink: 0; min-height: 40px; padding: 8px 10px; white-space: nowrap; color: #566c70; background: transparent; border: 1px solid transparent; border-radius: 7px; font-size: 12px; font-weight: 600; }
+.mofiney-nav button:hover { background: #e8f5f1; color: #11685f; }
+.mofiney-nav button[aria-current='true'] { color: #11685f; background: #e1f2ec; border-color: #baded2; }
+.mofiney-body { padding: 0 48px; }
+.mofiney-body h3 { margin: 0 0 16px; color: #152d31; font-size: clamp(24px, 3vw, 30px); line-height: 1.2; letter-spacing: -.025em; }
+.mofiney-body h4 { margin: 0 0 12px; font-size: 16px; line-height: 1.4; color: #172b32; }
+.mofiney-body p:not(.mofiney-eyebrow) { color: #5d7377; line-height: 1.75; font-size: 14px; }
+.mofiney-overview { display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; padding: 42px 0; }
+.mofiney-overview p:last-child { margin-bottom: 0; }
+.mofiney-body .mofiney-overview__note { font-size: 12px; }
+.mofiney-tags { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0 0 14px; list-style: none; }
+.mofiney-tags li { padding: 5px 10px; background: #e9f6f1; border-radius: 999px; color: #11685f; font-size: 12px; font-weight: 600; }
+.mofiney-section { display: grid; grid-template-columns: minmax(0, 1fr) 286px; align-items: start; gap: 68px; padding: 48px 0; border-top: 1px solid #dfe9e6; }
+.mofiney-feature__copy { min-width: 0; padding-top: 12px; }
+.mofiney-section__intro { margin-bottom: 26px; }
+.mofiney-choices { display: grid; gap: 8px; padding: 10px; background: #f3f8f6; border: 1px solid #e2ebe7; border-radius: 12px; }
+.mofiney-choices button { display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 12px; color: #52696d; text-align: left; background: transparent; border: 1px solid transparent; border-radius: 8px; font-size: 13px; }
+.mofiney-choices button > span:first-child { font-size: 10px; }
+.mofiney-choice-arrow { margin-left: auto; }
+.mofiney-choices button:hover { background: #e5f1eb; }
+.mofiney-choices button[aria-pressed='true'] { color: #11685f; background: #fff; border-color: #c1ded2; font-weight: 700; box-shadow: 0 3px 8px #11685f08; }
+.mofiney-detail { margin-top: 26px; padding-top: 24px; border-top: 1px solid #dfe9e6; }
+.mofiney-detail p:last-child { margin-bottom: 0; }
+.mofiney-body .mofiney-preview-note { display: inline-block; margin: 0 0 14px; padding: 6px 10px; background: #fff5df; color: #80521b; border: 1px solid #f0d5a7; border-radius: 6px; font-size: 11px; font-weight: 600; }
+.mofiney-shot { width: 100%; margin: 0; justify-self: center; }
+.mofiney-shot > button { position: relative; display: block; width: 100%; padding: 0; background: #0b1218; border: 1px solid #243b40; border-radius: 17px; overflow: hidden; cursor: zoom-in; box-shadow: 0 12px 32px #172b321a; }
+.mofiney-shot img { display: block; width: 100%; height: auto; }
+.mofiney-shot__zoom { position: absolute; bottom: 12px; right: 10px; padding: 6px 9px; background: #d9fff0f5; color: #145c50; border-radius: 6px; font-size: 10px; font-weight: 700; }
+.mofiney-shot figcaption { margin-top: 12px; color: #5d7377; text-align: center; font-size: 11px; line-height: 1.6; }
+.mofiney-footer { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; padding: 32px 0 40px; border-top: 1px solid #dfe9e6; }
+.mofiney-footer h3 { font-size: 22px; }
+.mofiney-footer p { margin: 0; }
+.mofiney-viewer { width: min(660px, calc(100% - 24px)); max-height: calc(100dvh - 24px); overflow-y: auto; overscroll-behavior: contain; }
+.mofiney-viewer .mofiney-bar { position: sticky; top: 0; z-index: 1; border-bottom: 1px solid #dfe9e6; }
+.mofiney-viewer > img { display: block; width: min(100%, 490px); height: auto; margin: 16px auto 0; }
+.mofiney-viewer > p { margin: 0; padding: 18px; color: #5d7377; font-size: 12px; text-align: center; }
+
+@media (max-width: 760px) {
+  .mofiney-dialog { width: calc(100% - 20px); max-height: calc(100dvh - 20px); border-radius: 14px; }
+  .mofiney-bar { padding: 10px 18px; font-size: 12px; }
+  .mofiney-scroll { max-height: calc(100dvh - 86px); }
+  .mofiney-hero { grid-template-columns: 1fr; gap: 30px; padding: 32px 24px; }
+  .mofiney-hero__phone { width: min(220px, 100%); justify-self: center; }
+  .mofiney-nav { padding: 10px 14px; }
+  .mofiney-body { padding: 0 24px; }
+  .mofiney-overview { grid-template-columns: 1fr; gap: 28px; padding: 32px 0; }
+  .mofiney-section { grid-template-columns: 1fr; gap: 28px; padding: 32px 0; }
+  .mofiney-feature__copy { padding-top: 0; }
+  .mofiney-shot { max-width: 280px; }
+  .mofiney-viewer .mofiney-bar { padding: 10px 14px; }
+}
+
+@media (max-width: 380px) {
+  .mofiney-bar__label { display: none; }
+  .mofiney-hero { padding: 28px 18px; }
+  .mofiney-body { padding: 0 18px; }
+}
